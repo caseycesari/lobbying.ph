@@ -1,4 +1,6 @@
 <%= erb :_cover %>
+<div class="container">
+
 <h1> Lobbyists </h1>
 
 <ul class="lobbyists">
@@ -28,23 +30,23 @@
 <h1> Firms </h1>
 
 <ul class="lobbyists">
-<% @firms.each do |lobbyist| %>
+<% @firms.each do |firm| %>
   <li class="lobbyist">
-    <h2><%= lobbyist.name %></h2>
+    <h2><%= firm.name %></h2>
     <ul>
       <li class="address">
-        <span><%= lobbyist.address1 %></span>
-        <span><%= lobbyist.address2 %></span>
-        <span><%= lobbyist.address3 %></span>
-        <span><%= lobbyist.city %></span>
-        <span><%= lobbyist.state %></span>
-        <span><%= lobbyist.zip %></span>
+        <span><%= firm.address1 %></span>
+        <span><%= firm.address2 %></span>
+        <span><%= firm.address3 %></span>
+        <span><%= firm.city %></span>
+        <span><%= firm.state %></span>
+        <span><%= firm.zip %></span>
       </li>
       <li class="phone">
-        <%= lobbyist.phone %>
+        <%= firm.phone %>
       </li>
       <li class="email">
-        <%= link_to "mailto:#{lobbyist.email}", lobbyist.email %>
+        <%= link_to "mailto:#{firm.email}", firm.email %>
       </li>
     </ul>
   </li>
@@ -54,25 +56,27 @@
 <h1> Principals </h1>
 
 <ul class="lobbyists">
-<% @principals.each do |lobbyist| %>
+<% @principals.each do |principal| %>
   <li class="lobbyist">
-    <h2><%= lobbyist.name %></h2>
+    <h2><%= principal.name %></h2>
     <ul>
       <li class="address">
-        <span><%= lobbyist.address1 %></span>
-        <span><%= lobbyist.address2 %></span>
-        <span><%= lobbyist.address3 %></span>
-        <span><%= lobbyist.city %></span>
-        <span><%= lobbyist.state %></span>
-        <span><%= lobbyist.zip %></span>
+        <span><%= principal.address1 %></span>
+        <span><%= principal.address2 %></span>
+        <span><%= principal.address3 %></span>
+        <span><%= principal.city %></span>
+        <span><%= principal.state %></span>
+        <span><%= principal.zip %></span>
       </li>
       <li class="phone">
-        <%= lobbyist.phone %>
+        <%= principal.phone %>
       </li>
       <li class="email">
-        <%= link_to "mailto:#{lobbyist.email}", lobbyist.email %>
+        <%= link_to "mailto:#{principal.email}", principal.email %>
       </li>
     </ul>
   </li>
 <% end %>
 </ul>
+
+</div>
