@@ -37,20 +37,33 @@ end
 
 get '/graphdata' do
   @lobbyists = Lobbyist.all()
-  @lobbyists = @lobbyists.map do |lobbyist| 
+
+  if (params[:search])
+    @lobbyists = Lobbyist.search(params[:search])
+  end
+
+  @lobbyists = @lobbyists.map do |lobbyist|
     l = {:id => "lobbyist_"+ lobbyist.id.to_s, :type => "lobbyist", :name => lobbyist.name, :firm_id => "firm_#{lobbyist.firm_id}"}
   end
+
   @firms = Firm.all()
-  @firms = @firms.map do |firm| 
+
+  if (params[:search])
+    @firms = Firm.search(params[:search])
+  end
+
+  @firms = @firms.map do |firm|
      l = {:id => "firm_"+ firm.id.to_s, :type => "firm", :name => firm.name}
    end
   @nodes = @lobbyists + @firms
+
+  @graphdata = true
   erb :graphdata
 end
 
 get '/graphdata.json' do
   content_type :json
-  @lobbyists = Lobbyist.all()	
+  @lobbyists = Lobbyist.all()
   @lobbyists.to_json
 end
 
