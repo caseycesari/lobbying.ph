@@ -12,7 +12,7 @@
 body {
   font-family: $font_family;  
   color: $text_color;
-  font-size: 12px;
+  font-size: $font_size;
 
   a {
     color: $link_color;
@@ -32,12 +32,16 @@ header {
     display: block;
     background: $pale;
     overflow: hidden;
+    padding: 10px 0;
     ul {
       width: $container_width;
       margin: 0 auto;
       li {
+        font-weight: bold;
         float: left;
-        a.current {
+        margin-right: 10px;
+        a {
+          text-decoration: none;
         }
       }
     }
@@ -48,6 +52,7 @@ header {
     line-height: 24px;
     a {
       text-decoration: none;
+      color: $secondary_heading_color;
     }
     span {
       display: block;
@@ -60,8 +65,9 @@ header {
 
 ul.lobbyists {
   li {
-    h3 {
+    h2 {
       font-family: $heading_font_family;
+      color: $primary_heading_color;
     }
-  }  
+  }
 }
