@@ -34,8 +34,14 @@ get '/stylesheets/:name.css' do
   scss(:"stylesheets/#{params[:name]}")
 end
 
+
 get '/results' do
-	erb :results
+
+  @lobbyists = Lobbyist.search(params[:search])
+  @firms = Firm.search(params[:search])
+  @principals = Principal.search(params[:search])
+
+  erb :results
 end
 
 get '/lobbyist/:id' do

@@ -2,7 +2,8 @@ module Searchable
     module ClassMethods
         def search(qstr, extra = {})
             like = "%#{qstr}%"
-            @searchable.map { |fld| Lobbyist.all(extra.merge fld.like => like) }.reduce(:|)
+
+            @searchable.map { |fld| self.all(extra.merge fld.like => like) }.reduce(:|)
         end
 
         def searchable_property *args
