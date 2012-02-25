@@ -54,10 +54,19 @@ var links = [];
 // Compute the distinct nodes from the links.
 nodes.forEach(function(node) {
 	if (node.firm_id && node.firm_id != "firm_nill" && node.firm_id != "firm_") {
-//		links.push({"source":node.id, "target":node.firm_id })
+		var link = {};
+		link.source = node
+		for (var i = 0; i < nodes.length; i++) {
+			if (nodes[i].id == node.firm_id) {
+				link.target = nodes[i];
+			}
+			
+		}
+		link.type = "resolved";
+		links.push(link);
 	}
-  //link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
-  //link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+	//link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+	//link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
 });
 
 var w = 960,
