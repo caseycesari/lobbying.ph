@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
 @import './variables';
+@import './layout';
 
 * {
   margin: 0;  
@@ -9,7 +10,6 @@
 body {
   font-family: $font_family;  
   color: $text_color;
-  padding: 10px;
   font-size: 12px;
 
   a {
@@ -18,7 +18,19 @@ body {
 }
 
 header {
-  display: block;  
+  display: block;
+  nav {
+    display: block;
+    background: $pale;
+    ul {
+      width: $container_width;
+      margin: 0 auto;
+      li {
+        a.current {
+        }
+      }
+    }
+  }
   h1 {
     font-size: 22px;
     font-family: $heading_font_family; 
