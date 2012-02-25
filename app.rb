@@ -18,7 +18,12 @@ Firm.auto_upgrade!
 Principal.auto_upgrade!
 
 get '/' do
-  @lobbyists = Lobbyist.all(:order => [ :id.desc ], :limit => 20)	
+  @lobbyists = Lobbyist.all(:order => [ :id.desc ], :limit => 20)
+
+  if params[:search]
+    @lobbyists = Lobbyist.search(params[:search])
+  end
+
   erb :index
 end
 
