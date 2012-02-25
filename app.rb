@@ -8,12 +8,14 @@ require 'data_mapper'
 
 require 'models/lobbyist'
 require 'models/firm'
+require 'models/principal'
 
 # setup db
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/lobbying.db")
 DataMapper.finalize
 Lobbyist.auto_upgrade!
 Firm.auto_upgrade!
+Principal.auto_upgrade!
 
 get '/' do
   @lobbyists = Lobbyist.all(:order => [ :id.desc ], :limit => 20)	
