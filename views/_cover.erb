@@ -1,11 +1,28 @@
 <section class="cover">
-  <div class="overview">
-    <p><%= @lobbyists.count %> Lobbyists</p>
-  </div>
-  <div class="overview">
-    <p><%= @firms.count %> Firms</p>
-  </div>
-  <div class="overview">
-    <p><%= @principals.count %> Principals</p>
+  <div class="container">
+    <div class="overview">
+      <p>
+        <span><%= @lobbyists.count %></span>
+        Lobbyists
+      </p>
+    </div>
+    <div class="overview">
+      <p>
+        <span><%= @firms.count %></span>
+        Firms
+      </p>
+    </div>
+    <div class="overview">
+      <p>
+        <span><%= @principals.count %></span>
+        Principals
+      </p>
+    </div>
+    <div class="last overview">
+      <p>
+        <span>1</span>
+        City
+      </p>
+    </div>
   </div>
 </section>

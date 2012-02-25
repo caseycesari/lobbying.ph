@@ -29,6 +29,7 @@ body {
       border: none;  
       input {
         display: block;
+        border: $gray_border;
       }
       button {
         display: block;
@@ -39,14 +40,14 @@ body {
 
 // primary page elements
 header {
+  background: $pale;
   display: block;
-  margin-bottom: 20px;
   nav {
     display: block;
-    background: $pale;
+    background: $dark;
     overflow: hidden;
     padding: 10px 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     ul {
       width: $container_width;
       margin: 0 auto;
@@ -56,16 +57,16 @@ header {
         margin-right: 10px;
         a {
           text-decoration: none;
+          color: #fff;
         }
       }
     }
   }
   h1 {
-    font-size: 22px;
+    font-size: 24px;
     font-family: $heading_font_family; 
-    line-height: 24px;
-    border-bottom: $gray_border;
-    padding-bottom: 10px;
+    line-height: 26px;
+    padding-bottom: 15px;
     a {
       text-decoration: none;
       color: $secondary_heading_color;
@@ -86,7 +87,7 @@ header {
       input.text {
         font-style: inherit;
         font-size: 14px;
-        padding: 5px;
+        padding: 10px;
         width: 200px;
         float: left;
       }
@@ -102,8 +103,45 @@ header {
   }
 }
 
+//
+section.cover {
+  padding: 30px 0;
+  overflow: hidden;
+  background: $pale_gray;
+  border-top: $gray_border;
+  border-bottom: $gray_border;
+  div.overview {
+    border: $gray_border;
+    border-radius: 3px;
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 22%;
+    float: left;
+    margin-right: 35px;
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      color: $secondary_heading_color;
+      font-family: $heading_font_family;
+      span {
+        display: block;
+        color: $highlight_color;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// lobbyist list
 ul.lobbyists {
+  clear: left;
+  padding-top: 30px;
   li.lobbyist {
+    width: 50%;
+    float: left;
     margin-bottom: 20px;
     h2 {
       font-family: $heading_font_family;
