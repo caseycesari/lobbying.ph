@@ -1,9 +1,10 @@
 // Text Colors
 $text_color: #555;
-$secondary_text_color: #888;
+$secondary_text_color: #777;
 $link_color: #027BB6;
 $primary_heading_color: #111;
 $secondary_heading_color: #346983;
+$highlight_color: #C00000;
 
 // Font Styles
 $font_family: helvetica, arial, sans-serif;
@@ -11,7 +12,12 @@ $heading_font_family: "Droid Sans", Arial, sans-serif;
 $font_size: 12px;
 
 // Background Colors
+$dark: #346983;
 $pale: #E4F3FA;
+$pale_gray: #f9f9f9;
 
 // Layout
 $container_width: 960px;
+
+// UI elements
+$gray_border: 1px solid #e5e5e5;

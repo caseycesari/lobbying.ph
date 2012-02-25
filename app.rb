@@ -19,7 +19,15 @@ Firm.auto_upgrade!
 Principal.auto_upgrade!
 
 get '/' do
-  @lobbyists = Lobbyist.all(:order => [ :id.desc ], :limit => 20)	
+  @all_lobbyists = Lobbyist.all()
+  @firms = Firm.all()
+  @principals = Principal.all()
+  @lobbyists = Lobbyist.all(:order => [ :id.desc ], :limit => 20)
+
+  if params[:search]
+    @lobbyists = Lobbyist.search(params[:search])
+  end
+
   erb :index
 end
 
@@ -44,6 +52,34 @@ get '/graphdata.json' do
   content_type :json
   @lobbyists = Lobbyist.all()	
   @lobbyists.to_json
+end
+
+get '/results' do
+
+  @lobbyists = Lobbyist.search(params[:search])
+  @firms = Firm.search(params[:search])
+  @principals = Principal.search(params[:search])
+
+  erb :results
+end
+
+get '/lobbyist/:id' do
+	@data = Lobbyist.get(params[:id])
+	erb :detail
+end
+
+get '/firm/:id' do
+	@data = Firm.get(params[:id])
+	erb :detail
+end
+
+get '/principal/:id' do
+	@data = Principal.get(params[:id])
+	erb :detail
+end
+
+get '/about' do
+	erb :about
 end
 
 # Helpers
