@@ -2,7 +2,14 @@ require 'rubygems'
 require 'sinatra'
 require 'compass'
 require 'sass'
-#require 'haml'
+require 'data_mapper'
+
+require 'models/lobbyist'
+
+# setup db
+DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/lobbying.db")
+DataMapper.finalize
+Lobbiyst.auto_upgrade!
 
 get '/' do
   erb :index
