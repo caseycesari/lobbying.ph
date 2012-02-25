@@ -32,6 +32,9 @@ get '/' do
 end
 
 get '/list/firms' do
+	@lobbyists = Lobbyist.all()
+  @firms = Firm.all()
+  @principals = Principal.all()
 	@data = Firm.all()
 	@title = "Registered Philadelphia Lobbying Firms"
 
@@ -39,6 +42,9 @@ get '/list/firms' do
 end
 
 get '/list/principals' do
+	@lobbyists = Lobbyist.all()
+  @firms = Firm.all()
+  @principals = Principal.all()
 	@data = Principal.all()
 	@title = "Principals"
 
@@ -46,6 +52,9 @@ get '/list/principals' do
 end
 
 get '/list/lobbyists' do
+	@lobbyists = Lobbyist.all()
+  @firms = Firm.all()
+  @principals = Principal.all()
 	@data = Lobbyist.all()
 	@title = "Registered Philadelphia Lobbyists"
 
