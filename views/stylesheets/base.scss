@@ -24,6 +24,10 @@ body {
     }
   }
 
+  p {
+    line-height: 18px;
+  }
+
   form {
     fieldset {
       border: none;  
@@ -146,6 +150,27 @@ ul.lobbyists {
     h2 {
       font-family: $heading_font_family;
       color: $primary_heading_color;
+    }
+  }
+}
+
+footer {
+  padding: 20px 0;
+  display: block;
+  overflow: hidden;
+  background: $pale;
+  border-top: $gray_border;
+  clear: left;
+  div.column {
+    float: left;
+    width: 50%;
+    h2 {
+      color: $secondary_heading_color;
+      margin-bottom: 10px;
+      font-family: $heading_font_family;
+    }
+    p {
+      width: 80%;
     }
   }
 }
