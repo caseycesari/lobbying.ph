@@ -2,11 +2,13 @@
 @import './variables';
 @import './layout';
 
+// reset
 * {
   margin: 0;  
   padding: 0;
 }
 
+// global page elements
 body {
   font-family: $font_family;  
   color: $text_color;
@@ -15,17 +17,26 @@ body {
   a {
     color: $link_color;
   }
+
+  ul {
+    li {
+      list-style-type:none;
+    }
+  }
 }
 
+// primary page elements
 header {
   display: block;
   nav {
     display: block;
     background: $pale;
+    overflow: hidden;
     ul {
       width: $container_width;
       margin: 0 auto;
       li {
+        float: left;
         a.current {
         }
       }
