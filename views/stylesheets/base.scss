@@ -52,6 +52,8 @@ header {
     font-size: 22px;
     font-family: $heading_font_family; 
     line-height: 24px;
+    border-bottom: $gray_border;
+    padding-bottom: 10px;
     a {
       text-decoration: none;
       color: $secondary_heading_color;
