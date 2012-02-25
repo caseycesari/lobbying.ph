@@ -1,8 +1,4 @@
-<section class="cover">
-  <div class="overview">
-    <p><%= @lobbyists.count %> Lobbyists</p>
-  </div>
-</section>
+<%= erb :_cover %>
 <ul class="lobbyists">
 <% @lobbyists.each do |lobbyist| %>
   <li class="lobbyist">
