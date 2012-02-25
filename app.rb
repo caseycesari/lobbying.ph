@@ -14,6 +14,7 @@ DataMapper.finalize
 Lobbyist.auto_upgrade!
 
 get '/' do
+  @lobbyists = Lobbyist.all(:order => [ :id.desc ], :limit => 20)	
   erb :index
 end
 
