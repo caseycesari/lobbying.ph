@@ -5,11 +5,20 @@
   </head>
   <body>
     <header>
-      <h1>
+      <nav>
+        <ul>
+          <li><%= link_to "" "Home" %></li>
+          <li><%= link_to "/about", "About" %></li>
+          <li><%= link_to "http://github.com/caseypt/lobbying.ph", "Source Code" %></li>
+        </ul>
+      </nav>
+      <h1 class="container">
         <%= link_to "/", "Lobbying.ph" %>
         <span>Who's Lobbying in Philadelphia?</span>
-      </h1> 
+      </h1>
     </header>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

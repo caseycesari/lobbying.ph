@@ -1,6 +1,7 @@
+<%= erb :_cover %>
 <ul class="lobbyists">
 <% @lobbyists.each do |lobbyist| %>
-  <li>
+  <li class="lobbyist">
     <h2><%= lobbyist.name %></h2>
     <ul>
       <li class="address">
