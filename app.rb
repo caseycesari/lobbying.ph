@@ -39,6 +39,10 @@ get '/graphdata' do
   @lobbyists = Lobbyist.all()
   @lobbyists = @lobbyists.map do |lobbyist| 
     l = {:id => "lobbyist_"+ lobbyist.id.to_s, :type => "lobbyist", :name => lobbyist.name, :firm_id => "firm_#{lobbyist.firm_id}"}
+    if (lobbyist.firm_id != nil)
+      l[:firmname] = Firm.get(lobbyist.firm_id).name
+    end
+    l
   end
   @firms = Firm.all()
   @firms = @firms.map do |firm| 
