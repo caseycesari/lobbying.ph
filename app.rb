@@ -7,11 +7,13 @@ require 'sass'
 require 'data_mapper'
 
 require 'models/lobbyist'
+require 'models/firm'
 
 # setup db
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/lobbying.db")
 DataMapper.finalize
 Lobbyist.auto_upgrade!
+Firm.auto_upgrade!
 
 get '/' do
   @lobbyists = Lobbyist.all(:order => [ :id.desc ], :limit => 20)	
