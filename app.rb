@@ -26,6 +26,10 @@ get '/stylesheets/:name.css' do
   scss(:"stylesheets/#{params[:name]}")
 end
 
+get '/about' do
+	erb :about
+end
+
 # Helpers
 helpers do
   def link_to(url, text=url, opts={})
