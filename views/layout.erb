@@ -16,6 +16,15 @@
         <%= link_to "/", "Lobbying.ph" %>
         <span>Who's Lobbying in Philadelphia?</span>
       </h1>
+      <form class="search">
+        <fieldset>
+          <input class="text" type="text" placeholder="Search Philly Lobbyists">
+          <%#=
+          NOTE: leaving this out for now
+          <button type="submit">Submit</button>
+          %>
+        </fieldset>
+      </form>
     </header>
     <div class="container">
       <%= yield %>

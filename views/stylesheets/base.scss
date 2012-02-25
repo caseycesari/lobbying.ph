@@ -23,6 +23,18 @@ body {
       list-style-type:none;
     }
   }
+
+  form {
+    fieldset {
+      border: none;  
+      input {
+        display: block;
+      }
+      button {
+        display: block;
+      }
+    }
+  }
 }
 
 // primary page elements
@@ -63,6 +75,29 @@ header {
       font-size: 18px;
       color: $secondary_text_color;
       font-weight: normal;
+    }
+  }
+  form {
+    width: $container_width;
+    margin: 0 auto;
+    fieldset {
+      margin-top: -50px;
+      float: right;
+      input.text {
+        font-style: inherit;
+        font-size: 14px;
+        padding: 5px;
+        width: 200px;
+        float: left;
+      }
+      button {
+        float: left;
+        background: #efefef;
+        padding: 5px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
