@@ -13,6 +13,19 @@ body {
   font-family: $font_family;  
   color: $text_color;
   font-size: $font_size;
+  h1 {
+    color: $secondary_heading_color;
+    margin-bottom: 20px;
+    border-bottom: $gray_border;
+    padding-bottom: 10px;
+    font-size: 22px;
+    a.view-all {
+      font-size: 12px;
+      color: $secondary_text_color;
+      font-weight: normal;
+      font-style: italic;
+    }
+  }
 
   a {
     color: $link_color;
@@ -110,6 +123,7 @@ header {
 //
 section.cover {
   padding: 30px 0;
+  margin-bottom: 30px;
   overflow: hidden;
   background: $pale_gray;
   border-top: $gray_border;
@@ -142,7 +156,6 @@ section.cover {
 // lobbyist list
 ul.lobbyists {
   clear: left;
-  padding-top: 30px;
   li.lobbyist {
     width: 50%;
     float: left;
@@ -152,6 +165,13 @@ ul.lobbyists {
       color: $primary_heading_color;
     }
   }
+}
+
+ul.lobbyists.one-column {
+  li {
+    width: 100%;
+    float: none;
+  }  
 }
 
 footer {
