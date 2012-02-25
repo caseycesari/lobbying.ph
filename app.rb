@@ -1,3 +1,5 @@
+$:.unshift(File.dirname(__FILE__))
+
 require 'rubygems'
 require 'sinatra'
 require 'compass'
@@ -9,7 +11,7 @@ require 'models/lobbyist'
 # setup db
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/lobbying.db")
 DataMapper.finalize
-Lobbiyst.auto_upgrade!
+Lobbyist.auto_upgrade!
 
 get '/' do
   erb :index
