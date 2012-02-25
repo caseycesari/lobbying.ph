@@ -31,6 +31,27 @@ get '/' do
   erb :index
 end
 
+get '/list/firms' do
+	@data = Firm.all()
+	@title = "Registered Philadelphia Lobbying Firms"
+
+	erb :list
+end
+
+get '/list/principals' do
+	@data = Principal.all()
+	@title = "Principals"
+
+	erb :list
+end
+
+get '/list/lobbyists' do
+	@data = Lobbyist.all()
+	@title = "Registered Philadelphia Lobbyists"
+
+	erb :list
+end
+
 get '/stylesheets/:name.css' do
   scss(:"stylesheets/#{params[:name]}")
 end
