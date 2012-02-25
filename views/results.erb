@@ -1,7 +1,7 @@
 <%= erb :_cover %>
 <div class="container">
 
-  <h1> Lobbyists (<a class="view-more" href="/graphdata?search=<%= params[:search] %>">Visualize</a>) </h1>
+  <h1> Lobbyists <a class="view-more" href="/graphdata?search=<%= params[:search] %>">(Visualize)</a> </h1>
 
   <ul class="lobbyists">
   <% @lobbyists.each do |lobbyist| %>
