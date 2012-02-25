@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>
+    <%= @title %>
+  </h1>
+  <ul class="lobbyists">
+  <% @data.each do |item| %>
+    <li class="lobbyist">
+      <h2><%= item.name %></h2>
+      <ul>
+        <li class="address">
+          <span><%= item.address1 %></span>
+          <span><%= item.address2 %></span>
+          <span><%= item.address3 %></span>
+          <span><%= item.city %></span>
+          <span><%= item.state %></span>
+          <span><%= item.zip %></span>
+        </li>
+        <li class="phone">
+          <%= item.phone %>
+        </li>
+        <li class="email">
+          <%= link_to "mailto:#{item.email}", item.email %>
+        </li>
+      </ul>
+    </li>
+  <% end %>
+  </ul>
+</div>

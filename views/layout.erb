@@ -8,7 +8,7 @@
       <nav>
         <ul>
           <li><%= link_to "/", "Home" %></li>
-          <li><%= link_to "/about", "About" %></li>
+          <li><%= link_to "#about", "About" %></li>
           <li><%= link_to "http://github.com/caseypt/lobbying.ph", "Source Code" %></li>
         </ul>
       </nav>
@@ -16,7 +16,11 @@
         <%= link_to "/", "Lobbying.ph" %>
         <span>Who's Lobbying in Philadelphia?</span>
       </h1>
-      <form class="search" method="get" action="/results">
+      <form class="search" method="get" action="<%= if (@graphdata)
+						    '/graphdata'
+						    else
+						    '/results'
+						    end %>">
         <fieldset>
           <input class="text" type="text" name="search" value="<%= params[:search] %>" placeholder="Search Philly Lobbyists">
           <%#=

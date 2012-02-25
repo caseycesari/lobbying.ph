@@ -1,6 +1,6 @@
+<div class="container"></div>
     <script type="text/javascript" src="/javascript/d3.v2.js"></script>
     <style type="text/css">
-
 path.link {
   fill: none;
   stroke: #666;
@@ -13,7 +13,7 @@ marker#licensing {
 
 path.link.licensing {
   stroke: green;
-  stroke-width: 4	px;
+  stroke-width: 4px;
 }
 
 path.link.resolved {
@@ -81,7 +81,7 @@ var force = d3.layout.force()
     .on("tick", tick)
     .start();
 
-var svg = d3.select("body").append("svg:svg")
+var svg = d3.select("body div.container").append("svg:svg")
     .attr("width", w)
     .attr("height", h);
 
