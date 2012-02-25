@@ -28,11 +28,13 @@ body {
 // primary page elements
 header {
   display: block;
+  margin-bottom: 20px;
   nav {
     display: block;
     background: $pale;
     overflow: hidden;
     padding: 10px 0;
+    margin-bottom: 20px;
     ul {
       width: $container_width;
       margin: 0 auto;
@@ -64,7 +66,8 @@ header {
 }
 
 ul.lobbyists {
-  li {
+  li.lobbyist {
+    margin-bottom: 20px;
     h2 {
       font-family: $heading_font_family;
       color: $primary_heading_color;
