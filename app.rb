@@ -5,6 +5,7 @@ require 'sinatra'
 require 'compass'
 require 'sass'
 require 'data_mapper'
+require 'json'
 
 require 'models/lobbyist'
 require 'models/firm'
@@ -26,9 +27,23 @@ get '/stylesheets/:name.css' do
   scss(:"stylesheets/#{params[:name]}")
 end
 
-get 'graphdata' do
-  @lobbyists = Lobbyist.all()	
+get '/graphdata' do
+  @lobbyists = Lobbyist.all()
+  @lobbyists = @lobbyists.map do |lobbyist| 
+    l = {:id => "lobbyist_"+ lobbyist.id.to_s, :type => "lobbyist", :name => lobbyist.name, :firm_id => "firm_#{lobbyist.firm_id}"}
+  end
+  @firms = Firm.all()
+  @firms = @firms.map do |firm| 
+     l = {:id => "firm_"+ firm.id.to_s, :type => "firm", :name => firm.name}
+   end
+  @nodes = @lobbyists + @firms
   erb :graphdata
+end
+
+get '/graphdata.json' do
+  content_type :json
+  @lobbyists = Lobbyist.all()	
+  @lobbyists.to_json
 end
 
 # Helpers
