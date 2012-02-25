@@ -109,7 +109,7 @@ var circle = svg.append("svg:g").selectAll("circle")
     .data(force.nodes())
   .enter().append("svg:circle")
 	.attr("class", function(d) { return d.type})
-    .attr("r", function(d) { return Math.random()*30 })
+    .attr("r", function(d) { return (Math.random()*20)+5 })
     .call(force.drag);
 
 var text = svg.append("svg:g").selectAll("g")
