@@ -1,23 +1,18 @@
+require File.join(File.dirname(__FILE__), "searchable.rb")
+
 class Lobbyist
     include DataMapper::Resource
+    include Searchable
     
     property :id, Serial
-    property :name, String
-    property :address1, String
-    property :address2, String
-    property :address3, String
-    property :city, String
-    property :state, String
-    property :zip, String
-    property :phone, String
-    property :email, String
-
-    @searchable = [:name, :address1, :address2, :address3, :city, :state, :zip, :phone, :email]
-
-    def self.search(qstr, extra = {})
-      like = "%#{qstr}%"
-
-      search = @searchable.map { |fld| Lobbyist.all(extra.merge fld.like => like) }.reduce(:|)
-    end
+    searchable_property :name, String
+    searchable_property :address1, String
+    searchable_property :address2, String
+    searchable_property :address3, String
+    searchable_property :city, String
+    searchable_property :state, String
+    searchable_property :zip, String
+    searchable_property :phone, String
+    searchable_property :email, String
 
 end
