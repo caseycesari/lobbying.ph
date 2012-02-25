@@ -165,6 +165,10 @@ ul.lobbyists {
     h2 {
       font-family: $heading_font_family;
       color: $primary_heading_color;
+      a {
+        color: $primary_heading_color;
+        text-decoration: none;
+      }
     }
   }
 }

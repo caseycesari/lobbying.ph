@@ -7,7 +7,7 @@
   <ul class="lobbyists">
   <% @lobbyists.each do |lobbyist| %>
     <li class="lobbyist">
-      <h2><%= lobbyist.name %></h2>
+      <h2><a href="/lobbyist/<%= lobbyist.id %>"><%= lobbyist.name %></a></h2>
       <ul>
         <li class="address">
           <span><%= lobbyist.address1 %></span>
