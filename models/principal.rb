@@ -11,4 +11,6 @@ class Principal
     property :zip, String
     property :phone, String
     property :email, String
+    
+    has n, :firms, :through => Resource, :required => false
 end

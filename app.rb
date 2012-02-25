@@ -26,6 +26,11 @@ get '/stylesheets/:name.css' do
   scss(:"stylesheets/#{params[:name]}")
 end
 
+get 'graphdata' do
+  @lobbyists = Lobbyist.all()	
+  erb :graphdata
+end
+
 # Helpers
 helpers do
   def link_to(url, text=url, opts={})

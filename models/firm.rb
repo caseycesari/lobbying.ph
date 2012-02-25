@@ -11,4 +11,7 @@ class Firm
     property :zip, String
     property :phone, String
     property :email, String
+    
+    has n, :lobbyists
+    has n, :principals, :through => Resource, :required => false
 end

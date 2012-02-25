@@ -11,4 +11,6 @@ class Lobbyist
     property :zip, String
     property :phone, String
     property :email, String
+    
+    belongs_to :firm, :required => false
 end
