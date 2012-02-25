@@ -1,21 +1,23 @@
-<ul class="lobbyists">
-  <li class="lobbyist">
-    <h2><%= @data.name %></h2>
-    <ul>
-      <li class="address">
-        <span><%= @data.address1 %></span>
-        <span><%= @data.address2 %></span>
-        <span><%= @data.address3 %></span>
-        <span><%= @data.city %></span>
-        <span><%= @data.state %></span>
-        <span><%= @data.zip %></span>
-      </li>
-      <li class="phone">
-        <%= @data.phone %>
-      </li>
-      <li class="email">
-        <%= link_to "mailto:#{@data.email}", @data.email %>
-      </li>
-    </ul>
-  </li>
-</ul>
+<div class="detail container">
+  <ul class="lobbyists">
+    <li class="lobbyist">
+      <h2><%= @data.name %></h2>
+      <ul>
+        <li class="address">
+          <span><%= @data.address1 %></span>
+          <span><%= @data.address2 %></span>
+          <span><%= @data.address3 %></span>
+          <span><%= @data.city %></span>
+          <span><%= @data.state %></span>
+          <span><%= @data.zip %></span>
+        </li>
+        <li class="phone">
+          <%= @data.phone %>
+        </li>
+        <li class="email">
+          <%= link_to "mailto:#{@data.email}", @data.email %>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
