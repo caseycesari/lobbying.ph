@@ -7,4 +7,9 @@
 
 body {
   font-family: $font_family;  
+  color: $text_color;
+
+  a {
+    color: $link_color;
+  }
 }
