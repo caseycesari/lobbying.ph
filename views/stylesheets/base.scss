@@ -8,8 +8,27 @@
 body {
   font-family: $font_family;  
   color: $text_color;
+  padding: 10px;
+  font-size: 12px;
 
   a {
     color: $link_color;
+  }
+}
+
+header {
+  display: block;  
+  h1 {
+    font-size: 22px;
+    line-height: 24px;
+    a {
+      text-decoration: none;
+    }
+    span {
+      display: block;
+      font-size: 18px;
+      color: $secondary_text_color;
+      font-weight: normal;
+    }
   }
 }
