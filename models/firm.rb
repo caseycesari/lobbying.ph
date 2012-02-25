@@ -1,5 +1,8 @@
+require File.join(File.dirname(__FILE__), "searchable.rb")
+
 class Firm
     include DataMapper::Resource
+    include Searchable
     
     property :id, Serial
     searchable_property :name, String
@@ -11,4 +14,5 @@ class Firm
     searchable_property :zip, String
     searchable_property :phone, String
     searchable_property :email, String
+
 end

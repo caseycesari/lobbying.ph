@@ -1,5 +1,8 @@
+require File.join(File.dirname(__FILE__), "searchable.rb")
+
 class Principal
     include DataMapper::Resource
+    include Searchable
     
     property :id, Serial
     searchable_property :name, String
