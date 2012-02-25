@@ -12,11 +12,13 @@
           <li><%= link_to "http://github.com/caseypt/lobbying.ph", "Source Code" %></li>
         </ul>
       </nav>
-      <h1>
+      <h1 class="container">
         <%= link_to "/", "Lobbying.ph" %>
         <span>Who's Lobbying in Philadelphia?</span>
       </h1>
     </header>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
