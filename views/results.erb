@@ -1,0 +1,78 @@
+<%= erb :_cover %>
+<h1> Lobbyists </h1>
+
+<ul class="lobbyists">
+<% @lobbyists.each do |lobbyist| %>
+  <li class="lobbyist">
+    <h2><%= lobbyist.name %></h2>
+    <ul>
+      <li class="address">
+        <span><%= lobbyist.address1 %></span>
+        <span><%= lobbyist.address2 %></span>
+        <span><%= lobbyist.address3 %></span>
+        <span><%= lobbyist.city %></span>
+        <span><%= lobbyist.state %></span>
+        <span><%= lobbyist.zip %></span>
+      </li>
+      <li class="phone">
+        <%= lobbyist.phone %>
+      </li>
+      <li class="email">
+        <%= link_to "mailto:#{lobbyist.email}", lobbyist.email %>
+      </li>
+    </ul>
+  </li>
+<% end %>
+</ul>
+
+<h1> Firms </h1>
+
+<ul class="lobbyists">
+<% @firms.each do |lobbyist| %>
+  <li class="lobbyist">
+    <h2><%= lobbyist.name %></h2>
+    <ul>
+      <li class="address">
+        <span><%= lobbyist.address1 %></span>
+        <span><%= lobbyist.address2 %></span>
+        <span><%= lobbyist.address3 %></span>
+        <span><%= lobbyist.city %></span>
+        <span><%= lobbyist.state %></span>
+        <span><%= lobbyist.zip %></span>
+      </li>
+      <li class="phone">
+        <%= lobbyist.phone %>
+      </li>
+      <li class="email">
+        <%= link_to "mailto:#{lobbyist.email}", lobbyist.email %>
+      </li>
+    </ul>
+  </li>
+<% end %>
+</ul>
+
+<h1> Principals </h1>
+
+<ul class="lobbyists">
+<% @principals.each do |lobbyist| %>
+  <li class="lobbyist">
+    <h2><%= lobbyist.name %></h2>
+    <ul>
+      <li class="address">
+        <span><%= lobbyist.address1 %></span>
+        <span><%= lobbyist.address2 %></span>
+        <span><%= lobbyist.address3 %></span>
+        <span><%= lobbyist.city %></span>
+        <span><%= lobbyist.state %></span>
+        <span><%= lobbyist.zip %></span>
+      </li>
+      <li class="phone">
+        <%= lobbyist.phone %>
+      </li>
+      <li class="email">
+        <%= link_to "mailto:#{lobbyist.email}", lobbyist.email %>
+      </li>
+    </ul>
+  </li>
+<% end %>
+</ul>
