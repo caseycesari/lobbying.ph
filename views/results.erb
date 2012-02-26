@@ -6,7 +6,7 @@
   <ul class="lobbyists">
   <% @lobbyists.each do |lobbyist| %>
     <li class="lobbyist">
-      <h2><%= lobbyist.name %></h2>
+      <h2><a class="title-link" href="/lobbyist/<%= lobbyist.id %>"><%= lobbyist.name %></a></h2>
       <ul>
         <li class="address">
           <span><%= lobbyist.address1 %></span>
@@ -32,7 +32,7 @@
   <ul class="lobbyists">
   <% @firms.each do |firm| %>
     <li class="lobbyist">
-      <h2><%= firm.name %></h2>
+      <h2><a class="title-link" href="/firm/<%= firm.id %>"><%= firm.name %></a></h2>
       <ul>
         <li class="address">
           <span><%= firm.address1 %></span>
@@ -58,7 +58,7 @@
   <ul class="lobbyists">
   <% @principals.each do |principal| %>
     <li class="lobbyist">
-      <h2><%= principal.name %></h2>
+      <h2><a class="title-link" href="/principal/<%= principal.id %>"><%= principal.name %></a></h2>
       <ul>
         <li class="address">
           <span><%= principal.address1 %></span>
