@@ -15,6 +15,7 @@ body {
   font-size: $font_size;
   h1 {
     color: $secondary_heading_color;
+    font-family: $heading_font_family;
     margin-bottom: 20px;
     border-bottom: $gray_border;
     padding-bottom: 10px;
@@ -82,7 +83,6 @@ header {
   }
   h1 {
     font-size: 24px;
-    font-family: $heading_font_family; 
     line-height: 26px;
     padding-bottom: 15px;
     border: none;
@@ -197,6 +197,7 @@ footer {
     }
     p {
       width: 80%;
+      margin-bottom: 15px;
     }
   }
 }
