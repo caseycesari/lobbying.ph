@@ -5,10 +5,10 @@
     <link href="/stylesheets/base.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav>
         <ul>
-          <li><%= link_to "/", "Home" %></li>
+          <li class="<%= current_class %>"><%= link_to "/", "Home" %></li>
           <li><%= link_to "#about", "About" %></li>
           <li><%= link_to "http://github.com/caseypt/lobbying.ph", "Source Code" %></li>
         </ul>
@@ -42,6 +42,7 @@
           <h2>Developers</h2>
           <p>This app was created at Code Across America: Philadelphia's Civic Hackathon on February 25, 2012 by <a href="https://twitter.com/caseypt">@caseypt</a>, <a href="http://www.mikeball.us">Mike Ball</a>, <a href="https://twitter.com/#!/">@ahinz</a>, and <a href="https://twitter.com/#!/dannyJF">@DannyJF</a>.</p>
           <p>Design inspired by <a href="http://chicagolobbyists.org/">ChicagoLobbyist.org</a></p>
+          <p><a href="#header">Return to top</a></p>
         </div>
       </div>
       <script type="text/javascript">

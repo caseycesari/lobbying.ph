@@ -136,4 +136,9 @@ helpers do
     opts.each { |key, value| attributes << key.to_s << "=\"" << value << "\" "}
     "<a href=\"#{url}\" #{attributes}>#{text}</a>"
   end
+
+  def current_class(path="")
+    request.path_info == "/#{path}" ? "current": nil
+  end
+  
 end
