@@ -9,12 +9,7 @@
       <h2><a class="title-link" href="/lobbyist/<%= lobbyist.id %>"><%= lobbyist.name %></a></h2>
       <ul>
         <li class="address">
-          <span><%= lobbyist.address1 %></span>
-          <span><%= lobbyist.address2 %></span>
-          <span><%= lobbyist.address3 %></span>
-          <span><%= lobbyist.city %></span>
-          <span><%= lobbyist.state %></span>
-          <span><%= lobbyist.zip %></span>
+          <%= address_string lobbyist %>
         </li>
         <li class="phone">
           <%= lobbyist.phone %>
@@ -35,12 +30,7 @@
       <h2><a class="title-link" href="/firm/<%= firm.id %>"><%= firm.name %></a></h2>
       <ul>
         <li class="address">
-          <span><%= firm.address1 %></span>
-          <span><%= firm.address2 %></span>
-          <span><%= firm.address3 %></span>
-          <span><%= firm.city %></span>
-          <span><%= firm.state %></span>
-          <span><%= firm.zip %></span>
+          <%= address_string firm %>
         </li>
         <li class="phone">
           <%= firm.phone %>
@@ -61,12 +51,7 @@
       <h2><a class="title-link" href="/principal/<%= principal.id %>"><%= principal.name %></a></h2>
       <ul>
         <li class="address">
-          <span><%= principal.address1 %></span>
-          <span><%= principal.address2 %></span>
-          <span><%= principal.address3 %></span>
-          <span><%= principal.city %></span>
-          <span><%= principal.state %></span>
-          <span><%= principal.zip %></span>
+          <%= address_string principal %>
         </li>
         <li class="phone">
           <%= principal.phone %>
