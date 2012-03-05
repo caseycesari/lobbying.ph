@@ -141,7 +141,7 @@ helpers do
     request.path_info == "/#{path}" ? "current": nil
   end
 
-  def lobbyist_addr(lobbyist)
+  def address_string(lobbyist)
     addr_str = ""
     if lobbyist.address1
       addr_str += "#{lobbyist.address1}"
