@@ -10,12 +10,7 @@
       <h2><a href="/lobbyist/<%= lobbyist.id %>"><%= lobbyist.name %></a></h2>
       <ul>
         <li class="address">
-          <span><%= lobbyist.address1 %></span>
-          <span><%= lobbyist.address2 %></span>
-          <span><%= lobbyist.address3 %></span>
-          <span><%= lobbyist.city %></span>
-          <span><%= lobbyist.state %></span>
-          <span><%= lobbyist.zip %></span>
+          <%= lobbyist_addr lobbyist %>
         </li>
         <li class="phone">
           <%= lobbyist.phone %>
