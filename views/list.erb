@@ -9,12 +9,7 @@
       <h2><%= item.name %></h2>
       <ul>
         <li class="address">
-          <span><%= item.address1 %></span>
-          <span><%= item.address2 %></span>
-          <span><%= item.address3 %></span>
-          <span><%= item.city %></span>
-          <span><%= item.state %></span>
-          <span><%= item.zip %></span>
+          <%= address_string item %>
         </li>
         <li class="phone">
           <%= item.phone %>

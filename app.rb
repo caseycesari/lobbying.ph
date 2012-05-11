@@ -136,4 +136,30 @@ helpers do
     opts.each { |key, value| attributes << key.to_s << "=\"" << value << "\" "}
     "<a href=\"#{url}\" #{attributes}>#{text}</a>"
   end
+
+  def current_class(path="")
+    request.path_info == "/#{path}" ? "current": nil
+  end
+
+  def address_string(lobbyist)
+    addr_str = ""
+    if lobbyist.address1
+      addr_str += "#{lobbyist.address1}"
+    end
+    if lobbyist.address2
+      addr_str += ", #{lobbyist.address2}"
+    end
+    if lobbyist.address3
+      addr_str += ", #{lobbyist.address3}"
+    end
+    if lobbyist.city
+      addr_str += ", #{lobbyist.city}"
+    end
+    if lobbyist.state && lobbyist.zip
+      addr_str += ", #{lobbyist.state}, #{lobbyist.zip}"
+    end
+
+    addr_str
+  end
+  
 end
